@@ -1,0 +1,12 @@
+.catagory {
+    height: 100%;
+}
+
+.catagory-title {
+    padding: 10px 0;
+}
+
+.tasks-container {
+    height: 75%;
+    overflow-y: scroll;
+}

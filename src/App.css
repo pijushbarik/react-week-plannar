@@ -1,0 +1,23 @@
+.app {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75vh;
+    border: 2px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.app >.row {
+    height: 100%;
+}
+
+.title {
+    padding: 15px 0;
+    border-bottom: 2px solid #333;
+}
+
+.catagories {
+    height: 100%;
+}
