@@ -3,10 +3,24 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import './task-editor.css';
 
-const TaskEditor = () => {
+const TaskEditor = (props) => {
+    // Is modal visible value is set to true?
+    let modalDisplayProp = props.visible ? 'block' : 'none';
+
+    // Button value - Add new or update?
+    let btnVal, btnHandler;
+    if(props.operationType === 'new') {
+        btnVal = 'Add';
+        btnHandler = props.addNew;
+    }
+    else if(props.operationType === 'edit') {
+        btnVal = 'Update';
+        btnHandler = props.update
+    }
+
     return(
-        <div className="modal-backdrop">
-            <div className="modal">
+        <div className="modal-backdrop" style={ { 'display': modalDisplayProp } }>
+            <div className="modal" style={ { 'display': modalDisplayProp } }>
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -14,12 +28,15 @@ const TaskEditor = () => {
                         </div>
                         <div className="modal-body">
                             <div className="form-group">
-                                <textarea className="form-control"></textarea>
+                                <input className="form-control" placeholder="Subject" name="subject" onChange={ props.subjectChanged } value={ props.subject } />
+                            </div>
+                            <div className="form-group">
+                                <textarea className="form-control" placeholder="Task info" name="info" onChange={ props.infoChanged } value={ props.info }></textarea>
                             </div>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary btn-sm">Cancel</button>
-                            <button type="button" className="btn btn-primary btn-sm">Add</button>
+                            <button type="button" className="btn btn-secondary btn-sm" onClick={ props.close }>Cancel</button>
+                            <button type="button" className="btn btn-primary btn-sm" onClick={ btnHandler }>{ btnVal }</button>
                         </div>
                     </div>
                     

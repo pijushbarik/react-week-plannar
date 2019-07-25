@@ -3,10 +3,10 @@
 }
 
 .catagory-title {
-    padding: 10px 0;
+    padding-right: 15px;
 }
 
 .tasks-container {
-    height: 75%;
+    height: 70%;
     overflow-y: scroll;
 }

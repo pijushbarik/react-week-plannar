@@ -5,9 +5,9 @@ import './catagory.css';
 
 const Catagory = (props) => {
     return (
-        <div className="col-md-3 catagory">
+        <div className="col-md-3 catagory pr-0">
             <div className="catagory-title">
-                <p className="lead font-weight-bold text-center">{ props.title }</p>
+                <p className="lead font-weight-bold text-center mb-1">{ props.title }</p>
             </div>
             <div className="tasks-container">
                 { props.children }

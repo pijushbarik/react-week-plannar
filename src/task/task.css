@@ -1,6 +1,5 @@
 .task-card {
     width: 95%;
-    max-height: 200px;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -8,12 +7,18 @@
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 20px;
+    background: linear-gradient(to bottom, #F1F8E9, #fff);
+
 }
 
 .task-controls {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.task-time {
+    align-self: flex-end;
 }
 
 .task-controls > *:not(:last-child) {
