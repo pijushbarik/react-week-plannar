@@ -33,6 +33,14 @@ const TaskEditor = (props) => {
                             <div className="form-group">
                                 <textarea className="form-control" placeholder="Task info" name="info" onChange={ props.infoChanged } value={ props.info }></textarea>
                             </div>
+                            <div className="form-group">
+                                <select className="form-control" name="catagory" onChange={ props.catagoryChanged } value={ props.catagory } >
+                                    <option value="all">All</option>
+                                    <option value="todo">To do</option>
+                                    <option value="progress">Progress</option>
+                                    <option value="completed">Completed</option>
+                                </select>
+                            </div>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary btn-sm" onClick={ props.close }>Cancel</button>

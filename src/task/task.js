@@ -20,7 +20,7 @@ const Task = (props) => {
     let dateFormatted = `${day}/${month}/${year} at ${hour}:${minute}`;
 
     return (
-        <div className="task-card">
+        <div className="task-card" draggable={ true } onDragStart={ props.dragStarted }>
             <h3><span className="text-secondary">{ props.taskIdx + 1 } </span>{ props.task.subject }</h3>
 
             <div className="task-info">
@@ -32,8 +32,8 @@ const Task = (props) => {
             </div>
 
             <div className="task-controls">
-                <button type="button" className="btn btn-outline-primary btn-sm" onClick={ props.edit }>Edit</button>
-                <button type="button" className="btn btn-outline-danger btn-sm" onClick={ props.remove }>Remove</button>
+                <button type="button" className="btn btn-outline-primary btn-sm" onClick={ props.clickedEdit }>Edit</button>
+                <button type="button" className="btn btn-outline-danger btn-sm" onClick={ props.clickedRemove }>Remove</button>
             </div>
         </div>
     );
