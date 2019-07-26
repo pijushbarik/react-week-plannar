@@ -122,9 +122,6 @@ class App extends React.Component {
       this.setState({
         tasks: JSON.parse(tasks)
       });
-    } else {
-      // Insert the dummy data in local storage
-      this.saveData();
     }
 
     // componentWillUnmount is not getting chance to unmount when reloading a page
